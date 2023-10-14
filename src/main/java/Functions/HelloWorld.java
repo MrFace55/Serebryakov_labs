@@ -1,4 +1,4 @@
-package ru.ssau.tk.Laba2;
+package Functions;
 
 public class HelloWorld {
     public static void main(String[] args) {
