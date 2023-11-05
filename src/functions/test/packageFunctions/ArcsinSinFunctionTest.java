@@ -11,9 +11,9 @@ public class ArcsinSinFunctionTest {
         ArcsinSinFunction arcsinsinFunction = new ArcsinSinFunction();
 
         // Проверка для различных входных параметров
-        assertEquals(1.0, arcsinsinFunction.apply(1.0), 1e-10);  // arcsin(sin(0)) = 0
+        assertEquals(1.0, arcsinsinFunction.apply(1.0), 1e-10);  // arcsin(sin(1)) = 1
         assertEquals(Math.PI / 2, arcsinsinFunction.apply(Math.PI / 2), 1e-10);  // arcsin(sin(pi/2)) = pi/2
-        assertEquals(Math.PI, arcsinsinFunction.apply(Math.PI), 1e-10);  // arcsin(sin(pi)) = pi
+        assertEquals(0, arcsinsinFunction.apply(Math.PI), 1e-10);  // arcsin(sin(pi)) = 0
         assertEquals(Math.PI / 3, arcsinsinFunction.apply(Math.PI / 3), 1e-10);  // arcsin(sin(pi/3)) = pi/3
     }
 }

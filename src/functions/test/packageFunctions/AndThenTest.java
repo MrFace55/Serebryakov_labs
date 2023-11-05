@@ -4,20 +4,20 @@ import org.junit.jupiter.api.Test;
 import packetFunctions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class andThenTest {
+public class AndThenTest {
     @Test
     public void testApply() {
         MathFunction f = x -> x * 2;
         MathFunction g = x -> x + 3;
         MathFunction h = x -> Math.pow(x, 2);
 
-        MathFunction complexFunction1 = f.andThen(g).andThen(h);
+        MathFunction complexFunction1 = f.AndThen(g).AndThen(h);
         assertEquals(14.0, complexFunction1.apply(2), 0.0001);
 
-        MathFunction complexFunction2 = g.andThen(h).andThen(f);
+        MathFunction complexFunction2 = g.AndThen(h).AndThen(f);
         assertEquals(19.0, complexFunction2.apply(2), 0.0001);
 
-        MathFunction complexFunction3 = h.andThen(f).andThen(g);
+        MathFunction complexFunction3 = h.AndThen(f).AndThen(g);
         assertEquals(100.0, complexFunction3.apply(2), 0.0001);
     }
 }
